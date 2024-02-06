@@ -13,6 +13,7 @@ variables:
 
   # Web app name
   webAppName: ''
+  agentpoolname: 'Test'
 
   # Environment name
   environmentName: 'devops-1'
@@ -25,9 +26,10 @@ stages:
   displayName: Build stage
   jobs:
   - job: MavenPackageAndPublishArtifacts
-    Maxconcurrency: 0
     displayName: Maven Package and Publish Artifacts
     pool:
+      name: $(agentpoolname)
+      demands: Limit -equals DisAbleParallel 
       vmImage: $(vmImageName)
 
     steps:
