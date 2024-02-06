@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'f2238976-bf9f-4ae9-bae1-7f5be4ced545'
 
   # Web app name
-  webAppName: ''
+  webAppName: 'test'
   agentpoolname: 'Test'
 
   # Environment name
