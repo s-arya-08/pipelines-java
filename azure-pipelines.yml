@@ -25,6 +25,7 @@ stages:
   displayName: Build stage
   jobs:
   - job: MavenPackageAndPublishArtifacts
+    Maxconcurrency: 0
     displayName: Maven Package and Publish Artifacts
     pool:
       vmImage: $(vmImageName)
